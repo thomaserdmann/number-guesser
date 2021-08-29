@@ -21,4 +21,14 @@ const compareGuesses = (user, computer, target) => {
     else return true;
 };
 
-console.log(compareGuesses(7, 2, 4))
+/*
+Create an updateScore() function. This function will be used to correctly increase the winner’s score after each round.
+This function:
+Has a single parameter. This parameter will be a string value representing the winner.
+Increases the score variable (humanScore or computerScore) by 1 depending on the winner passed in to updateScore. The string passed in will be either 'human' or 'computer'.
+Does not need to return any value. */
+
+const updateScore = winner => {
+    if (winner === 'human') { humanScore += 1 };
+    if (winner === 'computer') { computerScore += 1 };
+}
