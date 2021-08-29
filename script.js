@@ -41,5 +41,5 @@ After completing advanceRound(), your Number Guesser game should be fully operat
 score increase correctly, move to the next round, and see the correct round displayed.  */
 
 const advanceRound = () => {
-    currentRoundNumber += 1
-}
+    currentRoundNumber += 1;
+};
