@@ -43,3 +43,10 @@ score increase correctly, move to the next round, and see the correct round disp
 const advanceRound = () => {
     currentRoundNumber += 1;
 };
+
+/*You probably calculated the distance from the computer guess to the target and from the human guess to the target. 
+Move this into a separate getAbsoluteDistance() function that takes two numbers and returns the distance, and then use that inside your compareGuesses() function.*/
+
+const getAbsoluteDistance = (x, target) => {
+    return Math.abs(target - x)
+};
