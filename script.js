@@ -17,6 +17,9 @@ Determines which player (human or computer) wins based on which guess is closest
 Return true if the human player wins, and false if the computer player wins. */
 
 const compareGuesses = (user, computer, target) => {
+    if (user < 0 || user > 9) {
+        alert('Invalid entry');
+    };
     if (getAbsoluteDistance(computer, target) < getAbsoluteDistance(user, target)) return false;
     else return true;
 };
@@ -48,5 +51,8 @@ const advanceRound = () => {
 Move this into a separate getAbsoluteDistance() function that takes two numbers and returns the distance, and then use that inside your compareGuesses() function.*/
 
 const getAbsoluteDistance = (x, target) => {
-    return Math.abs(target - x)
+    return Math.abs(target - x);
 };
+
+/* Add functionality to check whether the user guess is between 0 and 9 and alert() the user that their number is out of range.
+It’s not possible to set a number outside this range with the + and = buttons, but users can do so by typing directly in the input field. */
