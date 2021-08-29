@@ -17,7 +17,7 @@ Determines which player (human or computer) wins based on which guess is closest
 Return true if the human player wins, and false if the computer player wins. */
 
 const compareGuesses = (user, computer, target) => {
-    if ((Math.abs(target - computer)) < (Math.abs(target - user))) return false;
+    if (getAbsoluteDistance(computer, target) < getAbsoluteDistance(user, target)) return false;
     else return true;
 };
 
